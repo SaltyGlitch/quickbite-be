@@ -44,7 +44,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 // app.UseCors("AllowOrigin");
 app.UseCors(options =>
-    options.WithOrigins(new[] { "http://localhost:3000" }).AllowCredentials().AllowAnyHeader().AllowAnyHeader().WithMethods("GET", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"));;
+    options.WithOrigins(new[] { "http://localhost:3000" ,"https://quickbite.azurewebsites.net"}).AllowCredentials().AllowAnyHeader().AllowAnyHeader().WithMethods("GET", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"));;
 app.UseAuthorization();
 
 app.MapControllers();
